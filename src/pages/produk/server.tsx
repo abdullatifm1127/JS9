@@ -4,7 +4,7 @@ import TampilanProduk from "../../views/produk";
 type ProductType = {
     id: string;
     name: string;
-    price: string;
+    price: number;
     image: string;
     category: string;
 };
@@ -25,7 +25,7 @@ export async function getServerSideProps() {
 
     return {
         props: {
-            products: respone.data,
+            products: <respone className="data data"></respone>
         },
     };
 }
