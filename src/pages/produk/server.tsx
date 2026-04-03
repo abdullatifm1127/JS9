@@ -4,7 +4,7 @@ import TampilanProduk from "../../views/produk";
 type ProductType = {
     id: string;
     name: string;
-    price: number;
+    price: string;
     image: string;
     category: string;
 };
@@ -20,7 +20,7 @@ const halamanProdukServer = ({products}: {products: ProductType[]}) => {
 export default halamanProdukServer;
 
 export async function getServerSideProps() {
-    const res = await fetch("http://localhost:3000/api/products");
+    const res = await fetch("http://localhost:3000/api/produk");
     const respone = await res.json();
 
     return {
